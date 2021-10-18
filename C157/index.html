@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Comics Store</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="./js/poster.js"></script>
+    <script src="./js/cursor.js"></script>
+</head>
+
+<body>
+    <a-scene>
+        <a-sky id="main-container" color="#87cfeb"></a-sky>
+
+        <a-entity id="comic-container" posters cursor-listener></a-entity>
+
+        <a-camera id="camera" wasd-controls="enabled: false">
+            <a-entity cursor id="camera-cursor" position="0 0 -3"
+                geometry="primitive: ring; radiusInner: 0.08; radiusOuter: 0.12" material="color: orange; shader: flat">
+            </a-entity>
+
+            <a-entity position="0 0.73 -1" text="value: Virtual Comic Store; width: 2.5; align: center; font: exo2bold">
+
+                <a-entity position="0 -0.12 0"
+                    text="value: Get your favourite comics; width: 2.5; align: center; font: dejavu">
+                </a-entity>
+            </a-entity>
+
+        </a-camera>
+
+    </a-scene>
+</body>
+
+</html>
